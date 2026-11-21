@@ -1,16 +1,27 @@
 # DevTrack – Project & Issue Tracking REST API
 
-DevTrack is a RESTful backend application designed to manage projects and track issues efficiently. It provides secure user authentication, project management, issue assignment, filtering, and API documentation.
+**DevTrack** is a RESTful backend application designed to manage projects and track issues efficiently. It provides secure user authentication, project management, issue assignment, filtering, pagination, and interactive API documentation.
+
+## Live Deployment
+
+| Resource | Link |
+|---|---|
+| Live API | https://devtrack-api-0vmd.onrender.com |
+| Swagger API Documentation | https://devtrack-api-0vmd.onrender.com/api-docs |
+| Health Check | https://devtrack-api-0vmd.onrender.com/health |
+| GitHub Repository | https://github.com/Archana7224/DevTrack |
+
+> Note: The Render free service may take some time to respond after periods of inactivity.
 
 ## Features
 
-- **Authentication & Authorization:** User registration, login, and JWT-based authentication.
+- **Authentication:** User registration and login with JWT-based authentication.
+- **Password Security:** Password hashing using bcrypt.
 - **Project Management:** Create, view, update, and delete projects.
 - **Issue Management:** Create, assign, update, view, and delete issues.
 - **Issue Filtering:** Filter issues by status, priority, and type.
-- **Pagination:** Paginated API responses for issue and project listings.
+- **Pagination:** Paginated project and issue listings.
 - **Data Validation:** Request validation using Zod.
-- **Password Security:** Password hashing using bcrypt.
 - **API Security:** Helmet security headers and rate limiting.
 - **API Documentation:** Interactive Swagger UI documentation.
 
@@ -34,22 +45,10 @@ DevTrack is a RESTful backend application designed to manage projects and track 
 DevTrack/
 ├── src/
 │   ├── config/
-│   │   ├── database.js
-│   │   └── swagger.js
 │   ├── controllers/
-│   │   ├── auth.controller.js
-│   │   ├── project.controller.js
-│   │   └── issue.controller.js
 │   ├── middleware/
-│   │   └── auth.middleware.js
 │   ├── models/
-│   │   ├── User.js
-│   │   ├── Project.js
-│   │   └── Issue.js
 │   ├── routes/
-│   │   ├── auth.routes.js
-│   │   ├── project.routes.js
-│   │   └── issue.routes.js
 │   ├── validators/
 │   ├── utils/
 │   ├── app.js
@@ -58,6 +57,7 @@ DevTrack/
 ├── .env.example
 ├── .gitignore
 ├── package.json
+├── package-lock.json
 └── README.md
 ```
 
@@ -90,7 +90,7 @@ CLIENT_URL=
 SEED_USER_PASSWORD=
 ```
 
-Replace the placeholder values with your own configuration. Never commit your actual `.env` file.
+Replace placeholder values with your own configuration. Never commit your actual `.env` file.
 
 ### 4. Run the application
 
@@ -106,7 +106,7 @@ Production mode:
 npm start
 ```
 
-The server runs locally at:
+The local server runs at:
 
 `http://localhost:5000`
 
@@ -156,13 +156,13 @@ Obtain the token by registering or logging in.
 
 Interactive API documentation is available through Swagger UI:
 
-`/api-docs`
+[Open DevTrack Swagger Documentation](https://devtrack-api-0vmd.onrender.com/api-docs)
 
 ## Health Check
 
-Check whether the API server is running:
+Check the deployed API's health:
 
-`/health`
+[DevTrack Health Check](https://devtrack-api-0vmd.onrender.com/health)
 
 ## Database
 
@@ -184,8 +184,8 @@ The application uses separate models for users, projects, and issues, with refer
 **Archana Nair**
 
 - GitHub: [Archana7224](https://github.com/Archana7224)
-- Project Repository: [DevTrack](https://github.com/Archana7224/DevTrack)
+- Project: [DevTrack Repository](https://github.com/Archana7224/DevTrack)
 
 ---
 
-*Built as a backend development project to demonstrate REST API design, authentication, database management, and secure application development.*
+*Built to demonstrate REST API development, authentication, database management, and backend application security.*
